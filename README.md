@@ -1,8 +1,8 @@
-# 🌘 shaunsingh/solarized.nvim
+# shaunsingh/solarized.nvim
 
 ## based off of the [Solarized Light Theme](https://github.com/altercation/vim-colors-solarized) for Vim 
 
-## 🌠 Features
+## Features
 
 solarized.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -35,7 +35,7 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
 
 + Neovim >= 0.5.0
 
-## 🌙 Installation
+## Installation
 
 Install via your favourite package manager:
 ```vim
@@ -48,7 +48,7 @@ Plug 'shaunsingh/solarized.nvim'
 use 'shaunsingh/solarized.nvim'
 ```
 
-## 🌓 Usage
+## Usage
 
 Enable the colorscheme:
 ```vim 
@@ -114,5 +114,4 @@ let g:moonlight_disable_background = false
 colorscheme moonlight
 ```
 
-Original Readme: https://github.com/marko-cerovac/material.nvim/blob/pure-lua/README.md
 
