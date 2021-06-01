@@ -1,4 +1,4 @@
-local solarized = require("moonlight.colors")
+local solarized = require("solarized.colors")
 
 local theme = {}
 
@@ -10,7 +10,7 @@ theme.loadSyntax = function ()
 		StorageClass =				{ fg = solarized.cyan }, -- static, register, volatile, etc.
 		Structure =					{ fg = solarized.puple }, -- struct, union, enum, etc.
 		Constant =					{ fg = solarized.yellow }, -- any constant
-		String =					{ fg = solarized.green, bg = moonlight.none, style= 'italic' }, -- Any string
+		String =					{ fg = solarized.green, bg = solarized.none, style= 'italic' }, -- Any string
 		Character =					{ fg = solarized.orange }, -- any character constant: 'c', '\n'
 		Number =					{ fg = solarized.orange }, -- a number constant: 5
 		Boolean =					{ fg = solarized.orange }, -- a boolean constant: TRUE, false
@@ -31,10 +31,10 @@ theme.loadSyntax = function ()
 		Delimiter =					{ fg = solarized.cyan }, -- character that needs attention like , or .
 		SpecialComment =			{ fg = solarized.gray }, -- special things inside a comment
 		Debug =						{ fg = solarized.red }, -- debugging statements
-		Underlined =				{ fg = solarized.link, bg = moonlight.none, style = 'underline' }, -- text that stands out, HTML links
+		Underlined =				{ fg = solarized.link, bg = solarized.none, style = 'underline' }, -- text that stands out, HTML links
 		Ignore =					{ fg = solarized.disabled }, -- left blank, hidden
-		Error =						{ fg = solarized.error, bg = moonlight.none, style = 'bold,underline' }, -- any erroneous construct
-		Todo =						{ fg = solarized.yellow, bg = moonlight.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+		Error =						{ fg = solarized.error, bg = solarized.none, style = 'bold,underline' }, -- any erroneous construct
+		Todo =						{ fg = solarized.yellow, bg = solarized.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
         htmlLink = { fg = solarized.link, style = "underline" },
         htmlH1 = { fg = solarized.cyan, style = "bold" },
@@ -54,16 +54,16 @@ theme.loadSyntax = function ()
 
 	-- Italic comments
 	if vim.g.solarized_italic_comments == true then
-		syntax.Comment =		{fg = solarized.comments, bg = moonlight.none, style = 'italic'} -- italic comments
+		syntax.Comment =		{fg = solarized.comments, bg = solarized.none, style = 'italic'} -- italic comments
 	else
 		syntax.Comment =		{fg = solarized.comments} -- normal comments
 	end
 
 	-- Italic Keywords
 	if vim.g.solarized_italic_keywords == true then
-		syntax.Conditional =		{fg = solarized.purple, bg = moonlight.none, style = 'italic'} -- italic if, then, else, endif, switch, etc.
-		syntax.Keyword =			{fg = solarized.purple, bg = moonlight.none, style = 'italic'} -- italic for, do, while, etc.
-		syntax.Repeat =				{fg = solarized.purple, bg = moonlight.none, style = 'italic'} -- italic any other keyword
+		syntax.Conditional =		{fg = solarized.purple, bg = solarized.none, style = 'italic'} -- italic if, then, else, endif, switch, etc.
+		syntax.Keyword =			{fg = solarized.purple, bg = solarized.none, style = 'italic'} -- italic for, do, while, etc.
+		syntax.Repeat =				{fg = solarized.purple, bg = solarized.none, style = 'italic'} -- italic any other keyword
 	else
 		syntax.Conditional =		{fg = solarized.purple} -- normal if, then, else, endif, switch, etc.
 		syntax.Keyword =			{fg = solarized.purple} -- normal for, do, while, etc.
@@ -72,13 +72,13 @@ theme.loadSyntax = function ()
 
 	-- Italic Function names
 	if vim.g.solarized_italic_functions == true then
-		syntax.Function =		{fg = solarized.blue, bg = moonlight.none, style = 'italic'} -- italic funtion names
+		syntax.Function =		{fg = solarized.blue, bg = solarized.none, style = 'italic'} -- italic funtion names
 	else
 		syntax.Function =		{fg = solarized.blue} -- normal function names
 	end
 
 	if vim.g.solarized_italic_variables == true then
-		Identifier =				{fg = solarized.gray, bg = moonlight.none, style = 'italic'}; -- any variable name
+		Identifier =				{fg = solarized.gray, bg = solarized.none, style = 'italic'}; -- any variable name
     else
 		Identifier =				{fg = solarized.gray}; -- any variable name
     end
@@ -92,61 +92,61 @@ theme.loadEditor = function ()
     -- Editor highlight groups
 
 	local editor = {
-		NormalFloat =			{ fg = solarized.fg, bg = moonlight.float }, -- normal text and background color
-		ColorColumn =			{ fg = solarized.none, bg = moonlight.active }, --  used for the columns set with 'colorcolumn'
+		NormalFloat =			{ fg = solarized.fg, bg = solarized.float }, -- normal text and background color
+		ColorColumn =			{ fg = solarized.none, bg = solarized.active }, --  used for the columns set with 'colorcolumn'
 		Conceal =				{ fg = solarized.disabled }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-		Cursor =				{ fg = solarized.cursor, bg = moonlight.none, style = 'reverse' }, -- the character under the cursor
-		CursorIM =				{ fg = solarized.cursor, bg = moonlight.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
-		Directory =				{ fg = solarized.blue, bg = moonlight.none }, -- directory names (and other special names in listings)
-		DiffAdd =				{ fg = solarized.green, bg = moonlight.none, style = 'reverse' }, -- diff mode: Added line
-		DiffChange =			{ fg = solarized.orange, bg = moonlight.none, style = 'reverse' }, --  diff mode: Changed line
-		DiffDelete =			{ fg = solarized.red, bg = moonlight.none, style = 'reverse' }, -- diff mode: Deleted line
-		DiffText =				{ fg = solarized.yellow, bg = moonlight.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
+		Cursor =				{ fg = solarized.cursor, bg = solarized.none, style = 'reverse' }, -- the character under the cursor
+		CursorIM =				{ fg = solarized.cursor, bg = solarized.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
+		Directory =				{ fg = solarized.blue, bg = solarized.none }, -- directory names (and other special names in listings)
+		DiffAdd =				{ fg = solarized.green, bg = solarized.none, style = 'reverse' }, -- diff mode: Added line
+		DiffChange =			{ fg = solarized.orange, bg = solarized.none, style = 'reverse' }, --  diff mode: Changed line
+		DiffDelete =			{ fg = solarized.red, bg = solarized.none, style = 'reverse' }, -- diff mode: Deleted line
+		DiffText =				{ fg = solarized.yellow, bg = solarized.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
 		EndOfBuffer =			{ fg = solarized.disabled },
 		ErrorMsg =				{ fg = solarized.none },
-		Folded =				{ fg = solarized.disabled, bg = moonlight.none, style = 'italic' },
+		Folded =				{ fg = solarized.disabled, bg = solarized.none, style = 'italic' },
 		FoldColumn =			{ fg = solarized.blue },
-		IncSearch =				{ fg = solarized.highlight, bg = moonlight.white, style = 'reverse' },
+		IncSearch =				{ fg = solarized.highlight, bg = solarized.white, style = 'reverse' },
 		LineNr =				{ fg = solarized.line_numbers },
 		CursorLineNr =			{ fg = solarized.accent },
-		MatchParen =			{ fg = solarized.yellow, bg = moonlight.none, style = 'bold' },
+		MatchParen =			{ fg = solarized.yellow, bg = solarized.none, style = 'bold' },
 		ModeMsg =				{ fg = solarized.accent },
 		MoreMsg =				{ fg = solarized.accent },
 		NonText =				{ fg = solarized.disabled },
-		Pmenu =					{ fg = solarized.text, bg = moonlight.contrast },
-		PmenuSel =				{ fg = solarized.accent, bg = moonlight.active },
-		PmenuSbar =				{ fg = solarized.text, bg = moonlight.contrast },
-		PmenuThumb =			{ fg = solarized.fg, bg = moonlight.accent },
+		Pmenu =					{ fg = solarized.text, bg = solarized.contrast },
+		PmenuSel =				{ fg = solarized.accent, bg = solarized.active },
+		PmenuSbar =				{ fg = solarized.text, bg = solarized.contrast },
+		PmenuThumb =			{ fg = solarized.fg, bg = solarized.accent },
 		Question =				{ fg = solarized.green },
-		QuickFixLine =			{ fg = solarized.highlight, bg = moonlight.white, style = 'reverse' },
-		qfLineNr =				{ fg = solarized.highlight, bg = moonlight.white, style = 'reverse' },
-		Search =				{ fg = solarized.highlight, bg = moonlight.white, style = 'reverse' },
+		QuickFixLine =			{ fg = solarized.highlight, bg = solarized.white, style = 'reverse' },
+		qfLineNr =				{ fg = solarized.highlight, bg = solarized.white, style = 'reverse' },
+		Search =				{ fg = solarized.highlight, bg = solarized.white, style = 'reverse' },
 		SpecialKey =			{ fg = solarized.purple },
-		SpellBad =				{ fg = solarized.red, bg = moonlight.none, style = 'italic,undercurl' },
-		SpellCap =				{ fg = solarized.blue, bg = moonlight.none, style = 'italic,undercurl' },
-		SpellLocal =			{ fg = solarized.cyan, bg = moonlight.none, style = 'italic,undercurl' },
-		SpellRare =				{ fg = solarized.purple, bg = moonlight.none, style = 'italic,undercurl' },
-		StatusLine =			{ fg = solarized.fg, bg = moonlight.contrast },
-		StatusLineNC =  		{ fg = solarized.text, bg = moonlight.disabled },
-		StatusLineTerm =		{ fg = solarized.fg, bg = moonlight.contrast },
-		StatusLineTermNC =		{ fg = solarized.text, bg = moonlight.disabled },
+		SpellBad =				{ fg = solarized.red, bg = solarized.none, style = 'italic,undercurl' },
+		SpellCap =				{ fg = solarized.blue, bg = solarized.none, style = 'italic,undercurl' },
+		SpellLocal =			{ fg = solarized.cyan, bg = solarized.none, style = 'italic,undercurl' },
+		SpellRare =				{ fg = solarized.purple, bg = solarized.none, style = 'italic,undercurl' },
+		StatusLine =			{ fg = solarized.fg, bg = solarized.contrast },
+		StatusLineNC =  		{ fg = solarized.text, bg = solarized.disabled },
+		StatusLineTerm =		{ fg = solarized.fg, bg = solarized.contrast },
+		StatusLineTermNC =		{ fg = solarized.text, bg = solarized.disabled },
 		TabLineFill =			{ fg = solarized.fg },
-		TablineSel =			{ fg = solarized.bg, bg = moonlight.accent },
+		TablineSel =			{ fg = solarized.bg, bg = solarized.accent },
 		Tabline =				{ fg = solarized.fg },
-		Title =					{ fg = solarized.green, bg = moonlight.none, style = 'bold' },
-		Visual =				{ fg = solarized.none, bg = moonlight.selection },
-		VisualNOS =				{ fg = solarized.none, bg = moonlight.selection },
+		Title =					{ fg = solarized.green, bg = solarized.none, style = 'bold' },
+		Visual =				{ fg = solarized.none, bg = solarized.selection },
+		VisualNOS =				{ fg = solarized.none, bg = solarized.selection },
 		WarningMsg =			{ fg = solarized.yellow },
-		WildMenu =				{ fg = solarized.orange, bg = moonlight.none, style = 'bold' },
-		CursorColumn =			{ fg = solarized.none, bg = moonlight.active },
-		CursorLine =			{ fg = solarized.none, bg = moonlight.none },
-		ToolbarLine =			{ fg = solarized.fg, bg = moonlight.bg_alt },
-		ToolbarButton =			{ fg = solarized.fg, bg = moonlight.none, style = 'bold' },
-		NormalMode =			{ fg = solarized.accent, bg = moonlight.none, style = 'reverse' },
-		InsertMode =			{ fg = solarized.green, bg = moonlight.none, style = 'reverse' },
-		ReplacelMode =			{ fg = solarized.red, bg = moonlight.none, style = 'reverse' },
-		VisualMode =			{ fg = solarized.purple, bg = moonlight.none, style = 'reverse' },
-		CommandMode =			{ fg = solarized.gray, bg = moonlight.none, style = 'reverse' },
+		WildMenu =				{ fg = solarized.orange, bg = solarized.none, style = 'bold' },
+		CursorColumn =			{ fg = solarized.none, bg = solarized.active },
+		CursorLine =			{ fg = solarized.none, bg = solarized.none },
+		ToolbarLine =			{ fg = solarized.fg, bg = solarized.bg_alt },
+		ToolbarButton =			{ fg = solarized.fg, bg = solarized.none, style = 'bold' },
+		NormalMode =			{ fg = solarized.accent, bg = solarized.none, style = 'reverse' },
+		InsertMode =			{ fg = solarized.green, bg = solarized.none, style = 'reverse' },
+		ReplacelMode =			{ fg = solarized.red, bg = solarized.none, style = 'reverse' },
+		VisualMode =			{ fg = solarized.purple, bg = solarized.none, style = 'reverse' },
+		CommandMode =			{ fg = solarized.gray, bg = solarized.none, style = 'reverse' },
 		Warnings =				{ fg = solarized.yellow },
 
         healthError =           { fg = solarized.error },
@@ -165,11 +165,11 @@ theme.loadEditor = function ()
 
     --Set transparent background
     if vim.g.solarized_disable_background == true then
-		editor.Normal =				{ fg = solarized.fg, bg = moonlight.none } -- normal text and background color
-		editor.SignColumn =			{ fg = solarized.fg, bg = moonlight.none }
+		editor.Normal =				{ fg = solarized.fg, bg = solarized.none } -- normal text and background color
+		editor.SignColumn =			{ fg = solarized.fg, bg = solarized.none }
     else
-		editor.Normal =				{ fg = solarized.fg, bg = moonlight.bg } -- normal text and background color
-		editor.SignColumn =			{ fg = solarized.fg, bg = moonlight.bg }
+		editor.Normal =				{ fg = solarized.fg, bg = solarized.bg } -- normal text and background color
+		editor.SignColumn =			{ fg = solarized.fg, bg = solarized.bg }
     end
 
     -- Remove window split borders
@@ -243,9 +243,9 @@ theme.loadTreeSitter = function ()
         TSText =                    { fg = solarized.text },    -- For strings considered text in a markup language.
         TSTextReference =           { fg = solarized.yellow }, -- FIXME
         TSEmphasis =                { fg = solarized.paleblue },    -- For text to be represented with emphasis.
-        TSUnderline =               { fg = solarized.fg, bg = moonlight.none, style = 'underline' },    -- For text to be represented with an underline.
+        TSUnderline =               { fg = solarized.fg, bg = solarized.none, style = 'underline' },    -- For text to be represented with an underline.
         TSStrike =                  { },    -- For strikethrough text.
-        TSTitle =                   { fg = solarized.paleblue, bg = moonlight.none, style = 'bold' },    -- Text that is part of a title.
+        TSTitle =                   { fg = solarized.paleblue, bg = solarized.none, style = 'bold' },    -- Text that is part of a title.
         TSLiteral =                 { fg = solarized.fg },    -- Literal text.
         TSURI =                     { fg = solarized.link },    -- Any URI like a link or email.
     }
@@ -254,7 +254,7 @@ theme.loadTreeSitter = function ()
 
     -- Italic comments
     if vim.g.solarized_italic_comments == true then
-        treesitter.TSComment=                  { fg = solarized.comments , bg = moonlight.none, style = 'italic' }    -- For comment blocks.
+        treesitter.TSComment=                  { fg = solarized.comments , bg = solarized.none, style = 'italic' }    -- For comment blocks.
     else
         treesitter.TSComment=                  { fg = solarized.comments }    -- For comment blocks.
     end
@@ -317,9 +317,9 @@ theme.loadLSP = function ()
         LspDiagnosticsFloatingHint =            { fg = solarized.purple  }, -- used for "Hint" diagnostic messages in the diagnostics float
         LspDiagnosticsVirtualTextHint =         { fg = solarized.purple  }, -- Virtual text "Hint"
         LspDiagnosticsUnderlineHint =           { style = 'undercurl', sp = solarized.paleblue }, -- used to underline "Hint" diagnostics.
-        LspReferenceText =                      { fg = solarized.accent, bg = moonlight.highlight }, -- used for highlighting "text" references
-        LspReferenceRead =                      { fg = solarized.accent, bg = moonlight.highlight }, -- used for highlighting "read" references
-        LspReferenceWrite =                     { fg = solarized.accent, bg = moonlight.highlight }, -- used for highlighting "write" references
+        LspReferenceText =                      { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "text" references
+        LspReferenceRead =                      { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "read" references
+        LspReferenceWrite =                     { fg = solarized.accent, bg = solarized.highlight }, -- used for highlighting "write" references
     }
 
     return lsp
@@ -333,8 +333,8 @@ theme.loadPlugins = function()
 
         -- LspTrouble
         LspTroubleText =                        { fg = solarized.text },
-        LspTroubleCount =                       { fg = solarized.purple, bg = moonlight.active },
-        LspTroubleNormal =                      { fg = solarized.fg, bg = moonlight.sidebar },
+        LspTroubleCount =                       { fg = solarized.purple, bg = solarized.active },
+        LspTroubleNormal =                      { fg = solarized.fg, bg = solarized.sidebar },
 
         -- Diff
         diffAdded =                             { fg = solarized.green },
@@ -349,9 +349,9 @@ theme.loadPlugins = function()
         -- Neogit
         NeogitBranch =                          { fg = solarized.paleblue },
         NeogitRemote =                          { fg = solarized.purple },
-        NeogitHunkHeader =                      { fg = solarized.fg, bg = moonlight.highlight },
-        NeogitHunkHeaderHighlight =             { fg = solarized.blue, bg = moonlight.contrast },
-        NeogitDiffContextHighlight =            { fg = solarized.text, bg = moonlight.contrast },
+        NeogitHunkHeader =                      { fg = solarized.fg, bg = solarized.highlight },
+        NeogitHunkHeaderHighlight =             { fg = solarized.blue, bg = solarized.contrast },
+        NeogitDiffContextHighlight =            { fg = solarized.text, bg = solarized.contrast },
         NeogitDiffDeleteHighlight =             { fg = solarized.red },
         NeogitDiffAddHighlight =                { fg = solarized.green },
 
@@ -378,7 +378,7 @@ theme.loadPlugins = function()
         TelescopeSelectionCaret =               { fg = solarized.purple },
         TelescopeSelection =                    { fg = solarized.purple },
         TelescopeMatching =                     { fg = solarized.cyan },
-        TelescopeNormal =                       { fg = solarized.fg, bg = moonlight.float },
+        TelescopeNormal =                       { fg = solarized.fg, bg = solarized.float },
 
         -- NvimTree
         NvimTreeRootFolder =                    { fg = solarized.blue, style = "bold" },
@@ -432,7 +432,7 @@ theme.loadPlugins = function()
         BufferLineFill =                        { bg = solarized.bg_alt },
 
         -- Sneak
-        Sneak =                                 { fg = solarized.bg, bg = moonlight.accent },
+        Sneak =                                 { fg = solarized.bg, bg = solarized.accent },
         SneakScope =                            { bg = solarized.selection },
 
         -- Indent Blankline
@@ -448,9 +448,9 @@ theme.loadPlugins = function()
 
     -- Disable nvim-tree background
         if vim.g.solarized_disable_background == true then
-            plugins.NvimTreeNormal =                        { fg = solarized.fg, bg = moonlight.none }
+            plugins.NvimTreeNormal =                        { fg = solarized.fg, bg = solarized.none }
         else
-            plugins.NvimTreeNormal =                        { fg = solarized.fg, bg = moonlight.sidebar }
+            plugins.NvimTreeNormal =                        { fg = solarized.fg, bg = solarized.sidebar }
         end
 
     return plugins
