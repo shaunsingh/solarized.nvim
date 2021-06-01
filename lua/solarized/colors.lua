@@ -11,7 +11,7 @@ local solarized = {
 	blue =          '#268bd2',
 	purple =        '#b58900',
 	orange =        '#cb4b16',
-	pink =          '#6c71c4',
+	pink =          '#7d8d09',
 
 	bg =            '#eee8d5',
 	bg_alt =        '#fdf6e3',
