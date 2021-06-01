@@ -1,6 +1,6 @@
 # shaunsingh/solarized.nvim
 
-## based off of the [Solarized Light Theme](https://github.com/altercation/vim-colors-solarized) for Vim 
+## based off of the [Solarized Light Theme](https://github.com/altercation/vim-colors-solarized) for Vim
 
 ## Features
 
@@ -51,7 +51,7 @@ use 'shaunsingh/solarized.nvim'
 ## Usage
 
 Enable the colorscheme:
-```vim 
+```vim
 "Vim-Script:
 colorscheme solarized
 ```
@@ -88,30 +88,28 @@ require('lualine').setup {
 
 ```lua
 -- Example config in lua
-vim.g.moonlight_italic_comments = true
-vim.g.moonlight_italic_keywords = true
-vim.g.moonlight_italic_functions = true
-vim.g.moonlight_italic_variables = false
-vim.g.moonlight_contrast = true
-vim.g.moonlight_borders = false 
-vim.g.moonlight_disable_background = false
+vim.g.solarized_italic_comments = true
+vim.g.solarized_italic_keywords = true
+vim.g.solarized_italic_functions = true
+vim.g.solarized_italic_variables = false
+vim.g.solarized_contrast = true
+vim.g.solarized_borders = false
+vim.g.solarized_disable_background = false
 
 -- Load the colorscheme
-require('moonlight').set()
+require('solarized').set()
 ```
 
 ```vim
 " Example config in Vim-Script
-let g:moonlight_italic_comments = true
-let g:moonlight_italic_keywords = true
-let g:moonlight_italic_functions = true
-let g:moonlight_italic_variables = false
-let g:moonlight_contrast = true
-let g:moonlight_borders = false 
-let g:moonlight_disable_background = false
+let g:solarized_italic_comments = true
+let g:solarized_italic_keywords = true
+let g:solarized_italic_functions = true
+let g:solarized_italic_variables = false
+let g:solarized_contrast = true
+let g:solarized_borders = false
+let g:solarized_disable_background = false
 
 -- Load the colorsheme
-colorscheme moonlight
+colorscheme solarized
 ```
-
-
