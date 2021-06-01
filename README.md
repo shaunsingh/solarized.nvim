@@ -2,6 +2,8 @@
 
 ## based off of the [Solarized Light Theme](https://github.com/altercation/vim-colors-solarized) for Vim
 
+<img width="1163" alt="Screen Shot 2021-06-01 at 2 08 52 PM" src="https://user-images.githubusercontent.com/71196912/120370710-f2647780-c2e2-11eb-87af-6835fc8a7783.png">
+
 ## Features
 
 solarized.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
