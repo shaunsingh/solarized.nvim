@@ -155,7 +155,7 @@ theme.loadEditor = function ()
 
         -- Dashboard
         DashboardShortCut =                     { fg = solarized.blue },
-        DashboardHeader =                       { fg = solarized.contrast },
+        DashboardHeader =                       { fg = solarized.grey },
         DashboardCenter =                       { fg = solarized.cyan },
         DashboardFooter =                       { fg = solarized.green, style = "italic" },
 
