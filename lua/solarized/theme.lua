@@ -209,23 +209,23 @@ theme.loadTreeSitter = function ()
     local treesitter = {
         TSAnnotation =              { fg = solarized.red, style = 'bold' },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
         TSAttribute =               { fg = solarized.yellow, style = 'bold' },    -- (unstable) TODO: docs
-        TSBoolean=                  { fg = solarized.orange, style = 'bold' },    -- For booleans.
-        TSCharacter=                { fg = solarized.orange, style = 'bold' },    -- For characters.
+        TSBoolean=                  { fg = solarized.orange},    -- For booleans.
+        TSCharacter=                { fg = solarized.orange},    -- For characters.
         TSConstructor =             { fg = solarized.purple, style = 'bold' }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         TSConstant =                { fg = solarized.yellow },    -- For constants
         TSConstBuiltin =            { fg = solarized.blue },    -- For constant that are built in the language: `nil` in Lua.
         TSConstMacro =              { fg = solarized.blue },    -- For constants that are defined by macros: `NULL` in C.
         TSError =                   { fg = solarized.error, style = 'bold' },    -- For syntax/parser errors.
         TSException =               { fg = solarized.yellow, style = 'bold' },    -- For exception related keywords.
-        TSField =                   { fg = solarized.gray, style = 'bold' }, -- For fields.
-        TSFloat =                   { fg = solarized.red, style = 'bold' },    -- For floats.
+        TSField =                   { fg = solarized.gray}, -- For fields.
+        TSFloat =                   { fg = solarized.red},    -- For floats.
         TSFuncMacro =               { fg = solarized.blue },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSInclude =                 { fg = solarized.cyan, style = 'bold' },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
         TSLabel =                   { fg = solarized.red }, -- For labels: `label:` in C and `:label:` in Lua.
         TSNamespace =               { fg = solarized.yellow },    -- For identifiers referring to modules and namespaces.
         --TSNone =                    { },    -- TODO: docs
-        TSNumber =                  { fg = solarized.orange, style = 'bold' },    -- For all numbers
-        TSOperator =                { fg = solarized.cyan, style = 'bold' }, -- For any operator: `+`, but also `->` and `*` in C.
+        TSNumber =                  { fg = solarized.orange},    -- For all numbers
+        TSOperator =                { fg = solarized.cyan}, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter =               { fg = solarized.paleblue }, -- For parameters of a function.
         TSParameterReference=       { fg = solarized.paleblue },    -- For references to parameters of a function.
         TSProperty =                { fg = solarized.paleblue }, -- Same as `TSField`.
