@@ -38,11 +38,11 @@ local solarized = {
 
 -- Enable contrast sidebars, floating windows and popup menus
 if vim.g.solarized_contrast == false then
-    solarized.sidebar = moonlight.bg
-    solarized.float = moonlight.bg
+    solarized.sidebar = solarized.bg
+    solarized.float = solarized.bg
 else
-    solarized.sidebar = moonlight.bg_alt
-    solarized.float = moonlight.bg_alt
+    solarized.sidebar = solarized.bg_alt
+    solarized.float = solarized.bg_alt
 end
 
 return solarized
