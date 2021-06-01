@@ -208,10 +208,10 @@ theme.loadTreeSitter = function ()
 
     local treesitter = {
         TSAnnotation =              { fg = solarized.red, style = 'bold' },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-        TSAttribute =               { fg = solarized.yellow, style = 'bold' },    -- (unstable) TODO: docs
+        TSAttribute =               { fg = solarized.yellow},    -- (unstable) TODO: docs
         TSBoolean=                  { fg = solarized.orange},    -- For booleans.
         TSCharacter=                { fg = solarized.orange},    -- For characters.
-        TSConstructor =             { fg = solarized.purple, style = 'bold' }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+        TSConstructor =             { fg = solarized.purple}, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         TSConstant =                { fg = solarized.yellow },    -- For constants
         TSConstBuiltin =            { fg = solarized.blue },    -- For constant that are built in the language: `nil` in Lua.
         TSConstMacro =              { fg = solarized.blue },    -- For constants that are defined by macros: `NULL` in C.
@@ -235,7 +235,7 @@ theme.loadTreeSitter = function ()
         TSString =                  { fg = solarized.green },    -- For strings.
         TSStringRegex =             { fg = solarized.blue }, -- For regexes.
         TSStringEscape =            { fg = solarized.disabled }, -- For escape characters within a string.
-        TSSymbol =                  { fg = solarized.yellow, style = 'bold' },    -- For identifiers referring to symbols or atoms.
+        TSSymbol =                  { fg = solarized.yellow},    -- For identifiers referring to symbols or atoms.
         TSType =                    { fg = solarized.purple, style = 'bold' },    -- For types.
         TSTypeBuiltin =             { fg = solarized.purple },    -- For builtin types.
         TSTag =                     { fg = solarized.red, style = 'bold' },    -- Tags like html tag names.
@@ -260,13 +260,13 @@ theme.loadTreeSitter = function ()
     end
 
     if vim.g.solarized_italic_keywords == true then
-        treesitter.TSConditional =             { fg = solarized.purple, style = 'bold,italic' }    -- For keywords related to conditionnals.
-        treesitter.TSKeyword =                 { fg = solarized.purple, style = 'bold,italic' } -- For keywords that don't fall in previous categories.
+        treesitter.TSConditional =             { fg = solarized.purple, style = 'italic' }    -- For keywords related to conditionnals.
+        treesitter.TSKeyword =                 { fg = solarized.purple, style = 'italic' } -- For keywords that don't fall in previous categories.
         treesitter.TSRepeat =                  { fg = solarized.purple, style = 'bold,italic' }    -- For keywords related to loops.
         treesitter.TSKeywordFunction =         { fg = solarized.purple, style = 'bold,italic' } -- For keywords used to define a fuction.
     else
-        treesitter.TSConditional =             { fg = solarized.purple, style = 'bold' }    -- For keywords related to conditionnals.
-        treesitter.TSKeyword =                 { fg = solarized.purple, style = 'bold' } -- For keywords that don't fall in previous categories.
+        treesitter.TSConditional =             { fg = solarized.purple}    -- For keywords related to conditionnals.
+        treesitter.TSKeyword =                 { fg = solarized.purple} -- For keywords that don't fall in previous categories.
         treesitter.TSRepeat =                  { fg = solarized.purple, style = 'bold' }    -- For keywords related to loops.
         treesitter.TSKeywordFunction =         { fg = solarized.purple, style = 'bold' } -- For keywords used to define a fuction.
     end
