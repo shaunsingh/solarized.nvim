@@ -246,7 +246,7 @@ theme.loadTreeSitter = function ()
         TSUnderline =               { fg = solarized.fg, bg = solarized.none, style = 'underline' },    -- For text to be represented with an underline.
         TSStrike =                  { },    -- For strikethrough text.
         TSTitle =                   { fg = solarized.paleblue, bg = solarized.none, style = 'bold' },    -- Text that is part of a title.
-        TSLiteral =                 { fg = solarized.fg, style = 'bold' },    -- Literal text.
+        TSLiteral =                 { fg = solarized.fg},    -- Literal text.
         TSURI =                     { fg = solarized.link },    -- Any URI like a link or email.
     }
 
