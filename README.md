@@ -104,14 +104,14 @@ require('solarized').set()
 
 ```vim
 " Example config in Vim-Script
-let g:solarized_italic_comments = true
-let g:solarized_italic_keywords = true
-let g:solarized_italic_functions = true
-let g:solarized_italic_variables = false
-let g:solarized_contrast = true
-let g:solarized_borders = false
-let g:solarized_disable_background = false
+let g:solarized_italic_comments = v:true
+let g:solarized_italic_keywords = v:true
+let g:solarized_italic_functions = v:true
+let g:solarized_italic_variables = v:false
+let g:solarized_contrast = v:true
+let g:solarized_borders = v:false
+let g:solarized_disable_background = v:false
 
--- Load the colorsheme
+" Load the colorsheme
 colorscheme solarized
 ```
