@@ -225,13 +225,13 @@ theme.loadTreeSitter = function ()
         TSNamespace =               { fg = solarized.yellow },    -- For identifiers referring to modules and namespaces.
         --TSNone =                    { },    -- TODO: docs
         TSNumber =                  { fg = solarized.orange},    -- For all numbers
-        TSOperator =                { fg = solarized.cyan}, -- For any operator: `+`, but also `->` and `*` in C.
+        TSOperator =                { fg = solarized.black}, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter =               { fg = solarized.paleblue }, -- For parameters of a function.
         TSParameterReference=       { fg = solarized.paleblue },    -- For references to parameters of a function.
         TSProperty =                { fg = solarized.paleblue }, -- Same as `TSField`.
-        TSPunctDelimiter =          { fg = solarized.cyan }, -- For delimiters ie: `.`
-        TSPunctBracket =            { fg = solarized.cyan }, -- For brackets and parens.
-        TSPunctSpecial =            { fg = solarized.cyan }, -- For special punctutation that does not fall in the catagories before.
+        TSPunctDelimiter =          { fg = solarized.black }, -- For delimiters ie: `.`
+        TSPunctBracket =            { fg = solarized.black }, -- For brackets and parens.
+        TSPunctSpecial =            { fg = solarized.black }, -- For special punctutation that does not fall in the catagories before.
         TSString =                  { fg = solarized.green },    -- For strings.
         TSStringRegex =             { fg = solarized.blue }, -- For regexes.
         TSStringEscape =            { fg = solarized.disabled }, -- For escape characters within a string.
@@ -272,21 +272,21 @@ theme.loadTreeSitter = function ()
     end
 
     if vim.g.solarized_italic_functions == true then
-        treesitter.TSFunction =                { fg = solarized.blue, style = 'bold,italic' }    -- For fuction (calls and definitions).
-        treesitter.TSMethod =                  { fg = solarized.blue, style = 'bold,italic' }    -- For method calls and definitions.
-        treesitter.TSFuncBuiltin =             { fg = solarized.cyan, style = 'bold,italic' }    -- For builtin functions: `table.insert` in Lua.
+        treesitter.TSFunction =                { fg = solarized.cursor, style = 'bold,italic' }    -- For fuction (calls and definitions).
+        treesitter.TSMethod =                  { fg = solarized.cursor, style = 'bold,italic' }    -- For method calls and definitions.
+        treesitter.TSFuncBuiltin =             { fg = solarized.yellow, style = 'bold,italic' }    -- For builtin functions: `table.insert` in Lua.
     else
-        treesitter.TSFunction =                { fg = solarized.blue, style = 'bold' }    -- For fuction (calls and definitions).
-        treesitter.TSMethod =                  { fg = solarized.blue, style = 'bold' }    -- For method calls and definitions.
-        treesitter.TSFuncBuiltin =             { fg = solarized.cyan, style = 'bold' }    -- For builtin functions: `table.insert` in Lua.
+        treesitter.TSFunction =                { fg = solarized.cursor, style = 'bold' }    -- For fuction (calls and definitions).
+        treesitter.TSMethod =                  { fg = solarized.cursor, style = 'bold' }    -- For method calls and definitions.
+        treesitter.TSFuncBuiltin =             { fg = solarized.yellow, style = 'bold' }    -- For builtin functions: `table.insert` in Lua.
     end
 
     if vim.g.solarized_italic_variables == true then
         treesitter.TSVariable =                { fg = solarized.gray, style = 'italic' } -- Any variable name that does not have another highlight.
         treesitter.TSVariableBuiltin =         { fg = solarized.gray, style = 'italic' } -- Variable names that are defined by the languages, like `this` or `self`.
     else
-        treesitter.TSVariable =                { fg = solarized.gray} -- Any variable name that does not have another highlight.
-        treesitter.TSVariableBuiltin =         { fg = solarized.gray} -- Variable names that are defined by the languages, like `this` or `self`.
+        treesitter.TSVariable =                { fg = solarized.cursor} -- Any variable name that does not have another highlight.
+        treesitter.TSVariableBuiltin =         { fg = solarized.cursor} -- Variable names that are defined by the languages, like `this` or `self`.
     end
 
     return treesitter
