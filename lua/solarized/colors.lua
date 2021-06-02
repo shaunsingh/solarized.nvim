@@ -13,9 +13,9 @@ local solarized = {
 	orange =        '#cb4b16',
 	pink =          '#073642',
 
-	bg =            '#eee8d5',
-	bg_alt =        '#fdf6e3',
-	fg =            '#002b36',
+	bg =            '#fdf6e3',
+	bg_alt =        '#eee8d5',
+	fg =            '#657b83',
 	text =          '#586e75',
 	comments =      '#657b83',
 	selection =     '#d8ccc4',
