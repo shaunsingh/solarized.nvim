@@ -226,13 +226,13 @@ theme.loadTreeSitter = function ()
         --TSNone =                    { },    -- TODO: docs
         TSNumber =                  { fg = solarized.orange},    -- For all numbers
         TSOperator =                { fg = solarized.black}, -- For any operator: `+`, but also `->` and `*` in C.
-        TSParameter =               { fg = solarized.paleblue }, -- For parameters of a function.
-        TSParameterReference=       { fg = solarized.paleblue },    -- For references to parameters of a function.
-        TSProperty =                { fg = solarized.paleblue }, -- Same as `TSField`.
+        TSParameter =               { fg = solarized.green }, -- For parameters of a function.
+        TSParameterReference=       { fg = solarized.green },    -- For references to parameters of a function.
+        TSProperty =                { fg = solarized.green }, -- Same as `TSField`.
         TSPunctDelimiter =          { fg = solarized.black }, -- For delimiters ie: `.`
         TSPunctBracket =            { fg = solarized.black }, -- For brackets and parens.
         TSPunctSpecial =            { fg = solarized.black }, -- For special punctutation that does not fall in the catagories before.
-        TSString =                  { fg = solarized.green },    -- For strings.
+        TSString =                  { fg = solarized.link },    -- For strings.
         TSStringRegex =             { fg = solarized.blue }, -- For regexes.
         TSStringEscape =            { fg = solarized.disabled }, -- For escape characters within a string.
         TSSymbol =                  { fg = solarized.yellow},    -- For identifiers referring to symbols or atoms.
