@@ -272,11 +272,11 @@ theme.loadTreeSitter = function ()
     end
 
     if vim.g.solarized_italic_functions == true then
-        treesitter.TSFunction =                { fg = solarized.cursor, style = 'bold,italic' }    -- For fuction (calls and definitions).
+        treesitter.TSFunction =                { fg = solarized.purple, style = 'bold,italic' }    -- For fuction (calls and definitions).
         treesitter.TSMethod =                  { fg = solarized.purple, style = 'bold,italic' }    -- For method calls and definitions.
         treesitter.TSFuncBuiltin =             { fg = solarized.yellow, style = 'bold,italic' }    -- For builtin functions: `table.insert` in Lua.
     else
-        treesitter.TSFunction =                { fg = solarized.cursor, style = 'bold' }    -- For fuction (calls and definitions).
+        treesitter.TSFunction =                { fg = solarized.purple, style = 'bold' }    -- For fuction (calls and definitions).
         treesitter.TSMethod =                  { fg = solarized.purple, style = 'bold' }    -- For method calls and definitions.
         treesitter.TSFuncBuiltin =             { fg = solarized.yellow, style = 'bold' }    -- For builtin functions: `table.insert` in Lua.
     end
