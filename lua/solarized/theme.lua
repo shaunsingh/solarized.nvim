@@ -260,15 +260,15 @@ theme.loadTreeSitter = function ()
     end
 
     if vim.g.solarized_italic_keywords == true then
-        treesitter.TSConditional =             { fg = solarized.purple, style = 'italic' }    -- For keywords related to conditionnals.
-        treesitter.TSKeyword =                 { fg = solarized.purple, style = 'italic' } -- For keywords that don't fall in previous categories.
-        treesitter.TSRepeat =                  { fg = solarized.purple, style = 'bold,italic' }    -- For keywords related to loops.
-        treesitter.TSKeywordFunction =         { fg = solarized.purple, style = 'bold,italic' } -- For keywords used to define a fuction.
+        treesitter.TSConditional =             { fg = solarized.greeen, style = 'italic' }    -- For keywords related to conditionnals.
+        treesitter.TSKeyword =                 { fg = solarized.green, style = 'italic' } -- For keywords that don't fall in previous categories.
+        treesitter.TSRepeat =                  { fg = solarized.green, style = 'bold,italic' }    -- For keywords related to loops.
+        treesitter.TSKeywordFunction =         { fg = solarized.green, style = 'bold,italic' } -- For keywords used to define a fuction.
     else
-        treesitter.TSConditional =             { fg = solarized.purple}    -- For keywords related to conditionnals.
-        treesitter.TSKeyword =                 { fg = solarized.purple} -- For keywords that don't fall in previous categories.
-        treesitter.TSRepeat =                  { fg = solarized.purple, style = 'bold' }    -- For keywords related to loops.
-        treesitter.TSKeywordFunction =         { fg = solarized.purple, style = 'bold' } -- For keywords used to define a fuction.
+        treesitter.TSConditional =             { fg = solarized.green}    -- For keywords related to conditionnals.
+        treesitter.TSKeyword =                 { fg = solarized.green} -- For keywords that don't fall in previous categories.
+        treesitter.TSRepeat =                  { fg = solarized.green, style = 'bold' }    -- For keywords related to loops.
+        treesitter.TSKeywordFunction =         { fg = solarized.green, style = 'bold' } -- For keywords used to define a fuction.
     end
 
     if vim.g.solarized_italic_functions == true then
