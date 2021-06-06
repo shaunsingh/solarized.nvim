@@ -154,9 +154,9 @@ theme.loadEditor = function ()
         healthWarning =         { fg = solarized.yellow },
 
         -- Dashboard
-        DashboardShortCut =                     { fg = solarized.blue },
-        DashboardHeader =                       { fg = solarized.blue },
-        DashboardCenter =                       { fg = solarized.blue },
+        DashboardShortCut =                     { fg = solarized.grey },
+        DashboardHeader =                       { fg = solarized.grey },
+        DashboardCenter =                       { fg = solarized.grey },
         DashboardFooter =                       { fg = solarized.green, style = "italic" },
 
 	}
