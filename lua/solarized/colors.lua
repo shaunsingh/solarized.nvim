@@ -1,3 +1,14 @@
+local bases = {
+	base03 =        '#002b36',
+	base02 =        '#073642',
+	base01 =        '#586e75',
+	base00 =        '#657b83',
+	base0 =         '#839496',
+	base1 =         '#93a1a1',
+	base2 =         '#eee8d5',
+	base3 =         '#fdf6e3',
+}
+
 local solarized = {
 
 	white =         '#eee8d5',
@@ -9,14 +20,18 @@ local solarized = {
 	paleblue =      '#586e75',
 	cyan =          '#7d8d09',
 	blue =          '#073642',
-	purple =        '#b58900',
+	purple =        '#b58900', -- why is this and purple swapped??
 	orange =        '#cb4b16',
 	pink =          '#073642',
 
-	bg =            '#fdf6e3',
-	bg_alt =        '#eee8d5',
-	fg =            '#657b83',
-	text =          '#586e75',
+	bg_light =       bases['base3'],
+	bg_light_alt =   bases['base2'],
+	bg_dark =        bases['base03'],
+	bg_dark_alt =    bases['base02'],
+	fg_light =       bases['base0'],
+	text_light =     bases['base1'],
+	fg_dark =        bases['base00'],
+	text_dark =      bases['base01'],
 	comments =      '#657b83',
 	selection =     '#d3cfc1',
 	contrast =      '#002b36',
@@ -34,6 +49,18 @@ local solarized = {
 	none =          'NONE'
 }
 
+-- If dark mode, swap fg and bg
+if vim.o.background == 'dark' then
+	solarized.bg = solarized.bg_dark
+	solarized.bg_alt = solarized.bg_dark_alt
+	solarized.fg = solarized.fg_dark
+	solarized.text = solarized.text_dark
+else
+	solarized.bg = solarized.bg_light
+	solarized.bg_alt = solarized.bg_light_alt
+	solarized.fg = solarized.fg_light
+	solarized.text = solarized.text_light
+end
 -- Optional colors
 
 -- Enable contrast sidebars, floating windows and popup menus

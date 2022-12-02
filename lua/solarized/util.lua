@@ -38,7 +38,9 @@ function util.load()
     -- Set the theme environment
     vim.cmd("hi clear")
     if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
-    vim.o.background = "dark"
+    if not vim.o.background then
+        vim.o.background = "light"
+    end
     vim.o.termguicolors = true
     vim.g.colors_name = "solarized"
 
@@ -48,23 +50,13 @@ function util.load()
         solarized.loadTerminal()
 
         -- imort tables for plugins, treesitter and lsp
-        local plugins = solarized.loadPlugins()
-        local treesitter = solarized.loadTreeSitter()
-        local lsp = solarized.loadLSP()
-
-        -- loop trough the plugins table and highlight every member
-        for group, colors in pairs(plugins) do
-            util.highlight(group, colors)
-        end
-
-        -- loop trough the treesitter table and highlight every member
-        for group, colors in pairs(treesitter) do
-            util.highlight(group, colors)
-        end
-
-        -- loop trough the lsp table and highlight every member
-        for group, colors in pairs(lsp) do
-            util.highlight(group, colors)
+        tables = {
+            plugins = solarized.loadPlugins(),
+            treesitter = solarized.loadTreeSitter(),
+            lsp = solarized.loadLSP(),
+        }
+        for _, table in pairs(tables) do
+            util.highlight_table_members(table)
         end
 
         -- if contrast is enabled, apply it to sidebars and floating windows
@@ -79,18 +71,24 @@ function util.load()
     local editor = solarized.loadEditor()
     local syntax = solarized.loadSyntax()
 
-    -- load editor highlights
-    for group, colors in pairs(editor) do
-        util.highlight(group, colors)
-    end
-
-    -- load syntax highlights
-    for group, colors in pairs(syntax) do
-        util.highlight(group, colors)
+    -- imort tables for plugins, treesitter and lsp
+    tables = {
+        editor = solarized.loadEditor(),
+        syntax = solarized.loadSyntax(),
+    }
+    for _, table in pairs(tables) do
+        util.highlight_table_members(table)
     end
 
     -- load the rest later ( lsp, treesitter, plugins )
     async:send()
+end
+
+function util.highlight_table_members(table)
+    -- loop trough the table and highlight every member
+    for group, colors in pairs(table) do
+        util.highlight(group, colors)
+    end
 end
 
 return util
