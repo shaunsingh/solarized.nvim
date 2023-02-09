@@ -22,7 +22,6 @@ local solarized = {
 	blue =          '#268bd2',
 	purple =        '#6c71c4',
 	orange =        '#cb4b16',
-	pink =          '#073642',
 	magenta =       '#d33682',
 	violet =        '#6c71c4',
 

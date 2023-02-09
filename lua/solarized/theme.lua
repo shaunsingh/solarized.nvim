@@ -15,18 +15,18 @@ theme.loadSyntax = function ()
 		Number =					{ fg = solarized.orange }, -- a number constant: 5
 		Boolean =					{ fg = solarized.orange }, -- a boolean constant: TRUE, false
 		Float =						{ fg = solarized.orange }, -- a floating point constant: 2.3e10
-		Statement =					{ fg = solarized.pink }, -- any statement
+		Statement =					{ fg = solarized.gray }, -- any statement
 		Label =						{ fg = solarized.yellow }, -- case, default, etc.
 		Operator =					{ fg = solarized.cyan }, -- sizeof", "+", "*", etc.
 		Exception =					{ fg = solarized.cyan }, -- try, catch, throw
 		PreProc =					{ fg = solarized.yellow }, -- generic Preprocessor
 		Include =					{ fg = solarized.blue }, -- preprocessor #include
-		Define =					{ fg = solarized.pink }, -- preprocessor #define
+		Define =					{ fg = solarized.gray }, -- preprocessor #define
 		Macro =						{ fg = solarized.cyan }, -- same as Define
 		Typedef =					{ fg = solarized.red }, -- A typedef
 		PreCondit =					{ fg = solarized.cyan }, -- preprocessor #if, #else, #endif, etc.
 		Special =					{ fg = solarized.red }, -- any special symbol
-		SpecialChar =				{ fg = solarized.pink }, -- special character in a constant
+		SpecialChar =				{ fg = solarized.gray }, -- special character in a constant
 		Tag =						{ fg = solarized.red }, -- you can use CTRL-] on this
 		Delimiter =					{ fg = solarized.cyan }, -- character that needs attention like , or .
 		SpecialComment =			{ fg = solarized.gray }, -- special things inside a comment
@@ -154,9 +154,9 @@ theme.loadEditor = function ()
         healthWarning =         { fg = solarized.purple },
 
         -- Dashboard
-        DashboardShortCut =                     { fg = solarized.grey },
-        DashboardHeader =                       { fg = solarized.grey },
-        DashboardCenter =                       { fg = solarized.grey },
+        DashboardShortCut =                     { fg = solarized.gray },
+        DashboardHeader =                       { fg = solarized.gray },
+        DashboardCenter =                       { fg = solarized.gray },
         DashboardFooter =                       { fg = solarized.green, style = "italic" },
 
 	}
@@ -420,7 +420,7 @@ theme.loadPlugins = function()
         LspSagaFinderSelection =                { fg = solarized.green },
         LspSagaCodeActionTitle =                { fg = solarized.paleblue },
         LspSagaCodeActionContent =              { fg = solarized.yellow },
-        LspSagaSignatureHelpBorder =            { fg = solarized.pink },
+        LspSagaSignatureHelpBorder =            { fg = solarized.gray },
         ReferencesCount =                       { fg = solarized.yellow },
         DefinitionCount =                       { fg = solarized.yellow },
         DefinitionIcon =                        { fg = solarized.blue },
