@@ -15,14 +15,16 @@ local solarized = {
 	gray =          '#073642',
 	black =         '#002b36',
 	red =           '#dc322f',
-	green =         '#7d8d09',
-	yellow =        '#6c71c4',
+	green =         '#859900',
+	yellow =        '#b58900',
 	paleblue =      '#586e75',
-	cyan =          '#7d8d09',
-	blue =          '#073642',
-	purple =        '#b58900', -- why is this and purple swapped??
+	cyan =          '#2aa198',
+	blue =          '#268bd2',
+	purple =        '#6c71c4',
 	orange =        '#cb4b16',
 	pink =          '#073642',
+	magenta =       '#d33682',
+	violet =        '#6c71c4',
 
 	bg_light =       bases['base3'],
 	bg_light_alt =   bases['base2'],
@@ -43,7 +45,7 @@ local solarized = {
 	cursor =        '#268bd2',
 	accent =        '#073642',
 
-	error =         '#d33682',
+	error =         '#dc322f',
 	link =          '#2aa198',
 
 	none =          'NONE'
