@@ -78,9 +78,9 @@ theme.loadSyntax = function ()
 	end
 
 	if vim.g.solarized_italic_variables == true then
-		syntax.Identifier =				{fg = solarized.gray, bg = solarized.none, style = 'italic'}; -- any variable name
+		syntax.Identifier =				{fg = solarized.text, bg = solarized.none, style = 'italic'}; -- any variable name
     else
-		syntax.Identifier =				{fg = solarized.gray}; -- any variable name
+		syntax.Identifier =				{fg = solarized.text}; -- any variable name
     end
 
     return syntax
