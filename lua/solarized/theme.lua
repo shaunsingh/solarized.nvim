@@ -15,7 +15,7 @@ theme.loadSyntax = function ()
 		Number =					{ fg = solarized.orange }, -- a number constant: 5
 		Boolean =					{ fg = solarized.orange }, -- a boolean constant: TRUE, false
 		Float =						{ fg = solarized.orange }, -- a floating point constant: 2.3e10
-		Statement =					{ fg = solarized.gray }, -- any statement
+		Statement =					{ fg = solarized.text }, -- any statement
 		Label =						{ fg = solarized.yellow }, -- case, default, etc.
 		Operator =					{ fg = solarized.cyan }, -- sizeof", "+", "*", etc.
 		Exception =					{ fg = solarized.cyan }, -- try, catch, throw
@@ -26,10 +26,10 @@ theme.loadSyntax = function ()
 		Typedef =					{ fg = solarized.red }, -- A typedef
 		PreCondit =					{ fg = solarized.cyan }, -- preprocessor #if, #else, #endif, etc.
 		Special =					{ fg = solarized.red }, -- any special symbol
-		SpecialChar =				{ fg = solarized.gray }, -- special character in a constant
+		SpecialChar =				{ fg = solarized.text }, -- special character in a constant
 		Tag =						{ fg = solarized.red }, -- you can use CTRL-] on this
 		Delimiter =					{ fg = solarized.cyan }, -- character that needs attention like , or .
-		SpecialComment =			{ fg = solarized.gray }, -- special things inside a comment
+		SpecialComment =			{ fg = solarized.text }, -- special things inside a comment
 		Debug =						{ fg = solarized.red }, -- debugging statements
 		Underlined =				{ fg = solarized.link, bg = solarized.none, style = 'underline' }, -- text that stands out, HTML links
 		Ignore =					{ fg = solarized.disabled }, -- left blank, hidden
@@ -146,7 +146,7 @@ theme.loadEditor = function ()
 		InsertMode =			{ fg = solarized.green, bg = solarized.none, style = 'reverse' },
 		ReplacelMode =			{ fg = solarized.red, bg = solarized.none, style = 'reverse' },
 		VisualMode =			{ fg = solarized.yellow, bg = solarized.none, style = 'reverse' },
-		CommandMode =			{ fg = solarized.gray, bg = solarized.none, style = 'reverse' },
+		CommandMode =			{ fg = solarized.text, bg = solarized.none, style = 'reverse' },
 		Warnings =				{ fg = solarized.purple },
 
         healthError =           { fg = solarized.error },
@@ -154,9 +154,9 @@ theme.loadEditor = function ()
         healthWarning =         { fg = solarized.purple },
 
         -- Dashboard
-        DashboardShortCut =                     { fg = solarized.gray },
-        DashboardHeader =                       { fg = solarized.gray },
-        DashboardCenter =                       { fg = solarized.gray },
+        DashboardShortCut =                     { fg = solarized.text },
+        DashboardHeader =                       { fg = solarized.text },
+        DashboardCenter =                       { fg = solarized.text },
         DashboardFooter =                       { fg = solarized.green, style = "italic" },
 
 	}
@@ -192,7 +192,7 @@ theme.loadTerminal = function ()
 	vim.g.terminal_color_5 = solarized.yellow
 	vim.g.terminal_color_6 = solarized.cyan
 	vim.g.terminal_color_7 = solarized.white
-	vim.g.terminal_color_8 = solarized.gray
+	vim.g.terminal_color_8 = solarized.text
 	vim.g.terminal_color_9 = solarized.red
 	vim.g.terminal_color_10 = solarized.green
 	vim.g.terminal_color_11 = solarized.purple
@@ -217,7 +217,7 @@ theme.loadTreeSitter = function ()
         TSConstMacro =              { fg = solarized.blue },    -- For constants that are defined by macros: `NULL` in C.
         TSError =                   { fg = solarized.error, style = 'bold' },    -- For syntax/parser errors.
         TSException =               { fg = solarized.purple, style = 'bold' },    -- For exception related keywords.
-        TSField =                   { fg = solarized.gray}, -- For fields.
+        TSField =                   { fg = solarized.text}, -- For fields.
         TSFloat =                   { fg = solarized.red},    -- For floats.
         TSFuncMacro =               { fg = solarized.blue },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSInclude =                 { fg = solarized.cyan, style = 'bold' },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
@@ -282,8 +282,8 @@ theme.loadTreeSitter = function ()
     end
 
     if vim.g.solarized_italic_variables == true then
-        treesitter.TSVariable =                { fg = solarized.gray, style = 'italic' } -- Any variable name that does not have another highlight.
-        treesitter.TSVariableBuiltin =         { fg = solarized.gray, style = 'italic' } -- Variable names that are defined by the languages, like `this` or `self`.
+        treesitter.TSVariable =                { fg = solarized.text, style = 'italic' } -- Any variable name that does not have another highlight.
+        treesitter.TSVariableBuiltin =         { fg = solarized.text, style = 'italic' } -- Variable names that are defined by the languages, like `this` or `self`.
     else
         treesitter.TSVariable =                { fg = solarized.cursor} -- Any variable name that does not have another highlight.
         treesitter.TSVariableBuiltin =         { fg = solarized.cursor} -- Variable names that are defined by the languages, like `this` or `self`.
@@ -420,7 +420,7 @@ theme.loadPlugins = function()
         LspSagaFinderSelection =                { fg = solarized.green },
         LspSagaCodeActionTitle =                { fg = solarized.paleblue },
         LspSagaCodeActionContent =              { fg = solarized.yellow },
-        LspSagaSignatureHelpBorder =            { fg = solarized.gray },
+        LspSagaSignatureHelpBorder =            { fg = solarized.text },
         ReferencesCount =                       { fg = solarized.yellow },
         DefinitionCount =                       { fg = solarized.yellow },
         DefinitionIcon =                        { fg = solarized.blue },
