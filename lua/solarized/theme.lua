@@ -15,13 +15,13 @@ theme.loadSyntax = function ()
 		Number =					{ fg = solarized.orange }, -- a number constant: 5
 		Boolean =					{ fg = solarized.orange }, -- a boolean constant: TRUE, false
 		Float =						{ fg = solarized.orange }, -- a floating point constant: 2.3e10
-		Statement =					{ fg = solarized.text }, -- any statement
+		Statement =					{ fg = solarized.gray }, -- any statement
 		Label =						{ fg = solarized.yellow }, -- case, default, etc.
 		Operator =					{ fg = solarized.cyan }, -- sizeof", "+", "*", etc.
 		Exception =					{ fg = solarized.cyan }, -- try, catch, throw
 		PreProc =					{ fg = solarized.yellow }, -- generic Preprocessor
 		Include =					{ fg = solarized.blue }, -- preprocessor #include
-		Define =					{ fg = solarized.gray }, -- preprocessor #define
+		Define =					{ fg = solarized.text }, -- preprocessor #define
 		Macro =						{ fg = solarized.cyan }, -- same as Define
 		Typedef =					{ fg = solarized.red }, -- A typedef
 		PreCondit =					{ fg = solarized.cyan }, -- preprocessor #if, #else, #endif, etc.
