@@ -142,7 +142,7 @@ theme.loadEditor = function ()
 		CursorLine =			{ fg = solarized.none, bg = solarized.bg_alt },
 		ToolbarLine =			{ fg = solarized.fg, bg = solarized.bg_alt },
 		ToolbarButton =			{ fg = solarized.fg, bg = solarized.none, style = 'bold' },
-		NormalMode =			{ fg = solarized.fg, bg = solarized.none, style = 'reverse' },
+		NormalMode =			{ fg = solarized.red, bg = solarized.none, style = 'reverse' },
 		InsertMode =			{ fg = solarized.green, bg = solarized.none, style = 'reverse' },
 		ReplacelMode =			{ fg = solarized.red, bg = solarized.none, style = 'reverse' },
 		VisualMode =			{ fg = solarized.yellow, bg = solarized.none, style = 'reverse' },
