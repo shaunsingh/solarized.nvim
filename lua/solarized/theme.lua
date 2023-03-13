@@ -146,7 +146,7 @@ theme.loadEditor = function ()
 		InsertMode =			{ fg = solarized.green, bg = solarized.none, style = 'reverse' },
 		ReplacelMode =			{ fg = solarized.red, bg = solarized.none, style = 'reverse' },
 		VisualMode =			{ fg = solarized.yellow, bg = solarized.none, style = 'reverse' },
-		CommandMode =			{ fg = solarized.text, bg = solarized.none, style = 'reverse' },
+		CommandMode =			{ fg = solarized.gray, bg = solarized.none, style = 'reverse' },
 		Warnings =				{ fg = solarized.purple },
 
         healthError =           { fg = solarized.error },
