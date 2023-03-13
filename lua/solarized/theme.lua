@@ -401,7 +401,7 @@ theme.loadPlugins = function()
         WhichKeyGroup =                         { fg = solarized.text },
         WhichKeyDesc =                          { fg = solarized.blue, style = 'italic' },
         WhichKeySeperator =                     { fg = solarized.fg },
-        WhichKeyFloating =                      { bg = solarized.float },
+        WhichKeyFloating =                      { bg = solarized.fg },
         WhichKeyFloat =                         { bg = solarized.float },
 
         -- LspSaga
