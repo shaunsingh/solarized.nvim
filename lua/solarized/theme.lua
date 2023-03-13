@@ -154,9 +154,9 @@ theme.loadEditor = function ()
         healthWarning =         { fg = solarized.purple },
 
         -- Dashboard
-        DashboardShortCut =                     { fg = solarized.text },
-        DashboardHeader =                       { fg = solarized.text },
-        DashboardCenter =                       { fg = solarized.text },
+        DashboardShortCut =                     { fg = solarized.gray },
+        DashboardHeader =                       { fg = solarized.gray },
+        DashboardCenter =                       { fg = solarized.gray },
         DashboardFooter =                       { fg = solarized.green, style = "italic" },
 
 	}
@@ -192,7 +192,7 @@ theme.loadTerminal = function ()
 	vim.g.terminal_color_5 = solarized.yellow
 	vim.g.terminal_color_6 = solarized.cyan
 	vim.g.terminal_color_7 = solarized.white
-	vim.g.terminal_color_8 = solarized.text
+	vim.g.terminal_color_8 = solarized.gray
 	vim.g.terminal_color_9 = solarized.red
 	vim.g.terminal_color_10 = solarized.green
 	vim.g.terminal_color_11 = solarized.purple
@@ -420,7 +420,7 @@ theme.loadPlugins = function()
         LspSagaFinderSelection =                { fg = solarized.green },
         LspSagaCodeActionTitle =                { fg = solarized.paleblue },
         LspSagaCodeActionContent =              { fg = solarized.yellow },
-        LspSagaSignatureHelpBorder =            { fg = solarized.text },
+        LspSagaSignatureHelpBorder =            { fg = solarized.gray },
         ReferencesCount =                       { fg = solarized.yellow },
         DefinitionCount =                       { fg = solarized.yellow },
         DefinitionIcon =                        { fg = solarized.blue },
