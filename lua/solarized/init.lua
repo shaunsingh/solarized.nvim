@@ -13,7 +13,7 @@
 local util = require('solarized.util')
 
 -- Load the theme
-local set = function ()
+local set = function()
     util.load()
 end
 

@@ -2,28 +2,28 @@ local util = {}
 local solarized = require('solarized.theme')
 
 -- Go trough the table and highlight the group with the color values
-util.highlight = function (group, color)
-    local style = color.style and "gui=" .. color.style or "gui=NONE"
-    local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
-    local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
-    local sp = color.sp and "guisp=" .. color.sp or ""
+util.highlight = function(group, color)
+    local style = color.style and 'gui=' .. color.style or 'gui=NONE'
+    local fg = color.fg and 'guifg=' .. color.fg or 'guifg=NONE'
+    local bg = color.bg and 'guibg=' .. color.bg or 'guibg=NONE'
+    local sp = color.sp and 'guisp=' .. color.sp or ''
 
-    local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
+    local hl = 'highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp
 
     vim.cmd(hl)
-    if color.link then vim.cmd("highlight! link " .. group .. " " .. color.link) end
+    if color.link then vim.cmd('highlight! link ' .. group .. ' ' .. color.link) end
 end
 
 -- Only define Solarized if it's the active colorshceme
 function util.onColorScheme()
-  if vim.g.colors_name ~= "solarized" then
-    vim.cmd [[autocmd! Solarized]]
-    vim.cmd [[augroup! Solarized]]
-  end
+    if vim.g.colors_name ~= 'solarized' then
+        vim.cmd [[autocmd! Solarized]]
+        vim.cmd [[augroup! Solarized]]
+    end
 end
 
 -- Change the background for the terminal, packer and qf windows
-util.contrast = function ()
+util.contrast = function()
     vim.cmd [[augroup Solarized]]
     vim.cmd [[  autocmd!]]
     vim.cmd [[  autocmd ColorScheme * lua require("solarized.util").onColorScheme()]]
@@ -36,21 +36,21 @@ end
 -- Load the theme
 function util.load()
     -- Set the theme environment
-    vim.cmd("hi clear")
-    if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
+    vim.cmd('hi clear')
+    if vim.fn.exists('syntax_on') then vim.cmd('syntax reset') end
     if not vim.o.background then
-        vim.o.background = "light"
+        vim.o.background = 'light'
     end
     vim.o.termguicolors = true
-    vim.g.colors_name = "solarized"
+    vim.g.colors_name = 'solarized'
 
     -- Load plugins, treesitter and lsp async
     local async
-    async = vim.loop.new_async(vim.schedule_wrap(function ()
+    async = vim.loop.new_async(vim.schedule_wrap(function()
         solarized.loadTerminal()
 
         -- imort tables for plugins, treesitter and lsp
-        tables = {
+        local tables = {
             plugins = solarized.loadPlugins(),
             treesitter = solarized.loadTreeSitter(),
             lsp = solarized.loadLSP(),
@@ -64,7 +64,6 @@ function util.load()
             util.contrast()
         end
         async:close()
-
     end))
 
     -- load the most importaint parts of the theme
