@@ -397,7 +397,7 @@ theme.loadPlugins = function()
         LspDiagnosticsHint =                    { fg = solarized.yellow },
 
         -- WhichKey
-        WhichKey =                              { fg = solarized.accent , style = 'bold'},
+        WhichKey =                              { fg = solarized.green, style = 'bold'},
         WhichKeyGroup =                         { fg = solarized.text },
         WhichKeyDesc =                          { fg = solarized.blue, style = 'italic' },
         WhichKeySeperator =                     { fg = solarized.fg },
