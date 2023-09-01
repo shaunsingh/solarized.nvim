@@ -15,21 +15,21 @@ theme.loadSyntax = function ()
 		Number =					{ fg = solarized.orange }, -- a number constant: 5
 		Boolean =					{ fg = solarized.orange }, -- a boolean constant: TRUE, false
 		Float =						{ fg = solarized.orange }, -- a floating point constant: 2.3e10
-		Statement =					{ fg = solarized.gray }, -- any statement
+		Statement =					{ fg = solarized.text }, -- any statement
 		Label =						{ fg = solarized.yellow }, -- case, default, etc.
 		Operator =					{ fg = solarized.cyan }, -- sizeof", "+", "*", etc.
 		Exception =					{ fg = solarized.cyan }, -- try, catch, throw
 		PreProc =					{ fg = solarized.yellow }, -- generic Preprocessor
 		Include =					{ fg = solarized.blue }, -- preprocessor #include
-		Define =					{ fg = solarized.gray }, -- preprocessor #define
+		Define =					{ fg = solarized.text }, -- preprocessor #define
 		Macro =						{ fg = solarized.cyan }, -- same as Define
 		Typedef =					{ fg = solarized.red }, -- A typedef
 		PreCondit =					{ fg = solarized.cyan }, -- preprocessor #if, #else, #endif, etc.
 		Special =					{ fg = solarized.red }, -- any special symbol
-		SpecialChar =				{ fg = solarized.gray }, -- special character in a constant
+		SpecialChar =				{ fg = solarized.text }, -- special character in a constant
 		Tag =						{ fg = solarized.red }, -- you can use CTRL-] on this
 		Delimiter =					{ fg = solarized.cyan }, -- character that needs attention like , or .
-		SpecialComment =			{ fg = solarized.gray }, -- special things inside a comment
+		SpecialComment =			{ fg = solarized.text }, -- special things inside a comment
 		Debug =						{ fg = solarized.red }, -- debugging statements
 		Underlined =				{ fg = solarized.link, bg = solarized.none, style = 'underline' }, -- text that stands out, HTML links
 		Ignore =					{ fg = solarized.disabled }, -- left blank, hidden
@@ -78,9 +78,9 @@ theme.loadSyntax = function ()
 	end
 
 	if vim.g.solarized_italic_variables == true then
-		syntax.Identifier =				{fg = solarized.gray, bg = solarized.none, style = 'italic'}; -- any variable name
+		syntax.Identifier =				{fg = solarized.text, bg = solarized.none, style = 'italic'}; -- any variable name
     else
-		syntax.Identifier =				{fg = solarized.gray}; -- any variable name
+		syntax.Identifier =				{fg = solarized.text}; -- any variable name
     end
 
     return syntax
@@ -142,7 +142,7 @@ theme.loadEditor = function ()
 		CursorLine =			{ fg = solarized.none, bg = solarized.bg_alt },
 		ToolbarLine =			{ fg = solarized.fg, bg = solarized.bg_alt },
 		ToolbarButton =			{ fg = solarized.fg, bg = solarized.none, style = 'bold' },
-		NormalMode =			{ fg = solarized.accent, bg = solarized.none, style = 'reverse' },
+		NormalMode =			{ fg = solarized.red, bg = solarized.none, style = 'reverse' },
 		InsertMode =			{ fg = solarized.green, bg = solarized.none, style = 'reverse' },
 		ReplacelMode =			{ fg = solarized.red, bg = solarized.none, style = 'reverse' },
 		VisualMode =			{ fg = solarized.yellow, bg = solarized.none, style = 'reverse' },
@@ -217,7 +217,7 @@ theme.loadTreeSitter = function ()
         TSConstMacro =              { fg = solarized.blue },    -- For constants that are defined by macros: `NULL` in C.
         TSError =                   { fg = solarized.error, style = 'bold' },    -- For syntax/parser errors.
         TSException =               { fg = solarized.purple, style = 'bold' },    -- For exception related keywords.
-        TSField =                   { fg = solarized.gray}, -- For fields.
+        TSField =                   { fg = solarized.text}, -- For fields.
         TSFloat =                   { fg = solarized.red},    -- For floats.
         TSFuncMacro =               { fg = solarized.blue },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSInclude =                 { fg = solarized.cyan, style = 'bold' },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
@@ -282,8 +282,8 @@ theme.loadTreeSitter = function ()
     end
 
     if vim.g.solarized_italic_variables == true then
-        treesitter.TSVariable =                { fg = solarized.gray, style = 'italic' } -- Any variable name that does not have another highlight.
-        treesitter.TSVariableBuiltin =         { fg = solarized.gray, style = 'italic' } -- Variable names that are defined by the languages, like `this` or `self`.
+        treesitter.TSVariable =                { fg = solarized.text, style = 'italic' } -- Any variable name that does not have another highlight.
+        treesitter.TSVariableBuiltin =         { fg = solarized.text, style = 'italic' } -- Variable names that are defined by the languages, like `this` or `self`.
     else
         treesitter.TSVariable =                { fg = solarized.cursor} -- Any variable name that does not have another highlight.
         treesitter.TSVariableBuiltin =         { fg = solarized.cursor} -- Variable names that are defined by the languages, like `this` or `self`.
@@ -397,11 +397,11 @@ theme.loadPlugins = function()
         LspDiagnosticsHint =                    { fg = solarized.yellow },
 
         -- WhichKey
-        WhichKey =                              { fg = solarized.accent , style = 'bold'},
+        WhichKey =                              { fg = solarized.green, style = 'bold'},
         WhichKeyGroup =                         { fg = solarized.text },
         WhichKeyDesc =                          { fg = solarized.blue, style = 'italic' },
         WhichKeySeperator =                     { fg = solarized.fg },
-        WhichKeyFloating =                      { bg = solarized.float },
+        WhichKeyFloating =                      { bg = solarized.fg },
         WhichKeyFloat =                         { bg = solarized.float },
 
         -- LspSaga
